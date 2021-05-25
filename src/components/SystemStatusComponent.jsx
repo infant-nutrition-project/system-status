@@ -92,7 +92,7 @@ class SystemStatusComponent extends Component {
                                     <ErrorMessage name="secret" component="div" className="alert alert-warning" />
                                     {this.state.isSecretWrong && <div className="alert alert-danger">Secret INCORRECT. Please retry</div>}
                                     <fieldset className="form-group">
-                                        <label>Secret key</label>
+                                        <label>If you do not know the secret key, please contact Liz.</label>
                                         <Field className="form-control" type="text" name="secret" />
                                     </fieldset>
                                     <button className="btn btn-success" type="submit">Submit</button>
