@@ -72,7 +72,7 @@ class SystemStatusComponent extends Component {
         let job1CumulativeCount = this.state.job1Data.CumulativeCount;
 
         let job2Timestamp = this.state.job2Data.Timestamp;
-        let job2ErrorCount = this.state.job2Data.job2ErrorCount;
+        let job2ErrorCount = this.state.job2Data.ErrorCount;
         let job2Data = this.state.job2Data.Data;
         return (
             <>
@@ -161,8 +161,8 @@ class SystemStatusComponent extends Component {
                     <div className="container">
                         <h3>Job 2</h3>
                         <h4> Timestamp (UTC Time): {job2Timestamp}</h4>
-                        <b>{job2ErrorCount === 0 && "All status OK"}</b>
-                        <b>{job2ErrorCount > 0 && `WARNING: ${job2ErrorCount} error(s) detected.`}</b>
+                        <b>{job2ErrorCount === 0 && <p className="text-success">All status OK</p>}</b>
+                        <b>{job2ErrorCount > 0 && <p className="text-warning bg-dark">WARNING: {job2ErrorCount} error(s) detected</p>}</b>
                         <table className="table">
                             <thead>
                                 <tr>
